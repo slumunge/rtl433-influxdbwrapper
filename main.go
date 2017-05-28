@@ -43,7 +43,7 @@ func main() {
 	//setup database
 	// Create a new HTTPClient
 	c, err := client.NewHTTPClient(client.HTTPConfig{
-		Addr: "http://localhost:8086",
+		Addr: viper.GetString("influxdbaddress"),
 		// Username: viper.Get("username"),
 		// Password: viper.Get("password"),
 	})
